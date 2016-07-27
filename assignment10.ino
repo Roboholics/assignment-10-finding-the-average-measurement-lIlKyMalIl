@@ -26,6 +26,7 @@ void loop() {
   }
   if (counter1 >= 10) {
     sum1 = sum1 / 10;
+    Serial.print("Sum1 ");
     Serial.println(sum1);
     counter1 = 0;
   }
@@ -36,6 +37,7 @@ void loop() {
   }
   if (counter2 >= 10) {
     sum2 = sum2 / 10;
+    Serial.print("Sum2 ");
     Serial.println(sum2);
     counter2 = 0;
   }
