@@ -1,8 +1,8 @@
 #include <Smartcar.h>
 
 SR04 sensor1, sensor2;
-const int TRIGGER_1 = 6; // Χρησιμοποιήστε τα pin που θέλετε
-const int ECHO_1 = 7;
+const int TRIGGER_1 = 4; // Χρησιμοποιήστε τα pin που θέλετε
+const int ECHO_1 = 5;
 const int TRIGGER_2 = A2;
 const int ECHO_2 = A3;
 
@@ -28,6 +28,7 @@ void loop() {
   if (counter1 >= 10) {
     sum1 = sum1 / 10;
     serial.println(sum1);
+    counter1 = 0;
   }
 
   if (Distance2 > 0) {
@@ -37,5 +38,6 @@ void loop() {
   if (counter2 >= 10) {
     sum2 = sum2 / 10;
     serial.println(sum2);
+    counter2 = 0;
   }
 }
